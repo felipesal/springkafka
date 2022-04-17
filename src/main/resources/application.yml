@@ -11,7 +11,7 @@ spring:
           reader: true
       schema:
         registry:
-          url: localhost:8081
+          url: http://localhost:8081
     consumer:
       group-id: group_id
       auto-offset-reset: earliest

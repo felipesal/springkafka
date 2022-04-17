@@ -20,10 +20,12 @@ public class PeopleProducer {
 	}
 
 	public void sendMessage(People people) {
-		kafkaTemplate.send(topicName, people).addCallback(
-			success -> log.info("Mensagem enviada com sucesso"),
-			failure -> log.error("Mensagem com falha")
-		);
+		kafkaTemplate.send(topicName, people)
+					.addCallback(
+						success -> log.info("Mensagem enviada com sucesso"),
+						failure -> log.error("Mensagem com falha")
+					)
+					;
 	}
     
 }
